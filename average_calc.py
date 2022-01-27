@@ -11,9 +11,12 @@ import random
 
 
 def main():
-    # initalizing sum and counter
+    # initializing  sum and counter
     sum = 0
     counter = 0
+    
+    # declaring variable
+    list_of_ints = []
 
     # display opening message to console
     print("This program generates a list of random "
@@ -22,17 +25,17 @@ def main():
 
     # displays random numbers and calculates average
     for counter in range(constants.MAX_ARRAY_SIZE):
-        list_of_ints = [random.randint(constants.MIN_NUM, constants.MAX_NUM)]
-        sum = sum + list_of_ints[0]
+        list_of_ints.append(random.randint(constants.MIN_NUM, constants.MAX_NUM))
+        sum = sum + list_of_ints[counter]
         print("{} added to the list at "
-              "position {}" .format(list_of_ints[0], counter))
+              "position {}" .format(list_of_ints[counter], counter))
 
-        # determine if array is full
-        # calculate and display average
-        if counter == 9:
-            average = sum / constants.MAX_ARRAY_SIZE
-            print("")
-            print("The average is {}" .format(str(average)))
+    # determine if array is full
+    # calculate and display average    
+    for counter in range(1):
+        average = sum / constants.MAX_ARRAY_SIZE
+        print("")
+        print("The average is {}" .format(str(average)))
 
 
 if __name__ == "__main__":
